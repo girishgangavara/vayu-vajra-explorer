@@ -44,7 +44,7 @@ const FareInfo = () => {
                     <span className="text-muted-foreground">/month</span>
                   </div>
                   <p className="text-sm text-muted-foreground">
-                    Available at Vydehi TTMC & Kadugodi via Tummoc App
+                    Available at Vydehi TTMC / Kadugodi Bus station / Airport Terminal 1 / Tummoc App
                   </p>
                 </div>
               </div>
@@ -82,7 +82,11 @@ const FareInfo = () => {
             <div className="mt-8 p-4 bg-primary/10 rounded-xl flex items-start gap-3">
               <Info className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
               <p className="text-sm text-muted-foreground">
-                <span className="font-medium text-foreground">Note:</span> Fares are stage-based and may vary depending on your boarding and alighting points. Senior citizens, students, and differently-abled passengers may avail discounts as per BMTC policy.
+                <span className="font-medium text-foreground">Note:</span> 
+                <div>
+                <p>1. Fares are stage-based and may vary depending on your boarding and alighting points.</p>
+                <p>2. No discounts for senior citizens, students, and differently-abled passengers as per BMTC policy.</p>
+                </div>
               </p>
             </div>
           </div>

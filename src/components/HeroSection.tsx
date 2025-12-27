@@ -1,4 +1,4 @@
-import { Plane, Clock, MapPin, Wifi } from 'lucide-react';
+import { Plane, Clock, MapPin, Wifi, Armchair } from 'lucide-react';
 import Bus3D from './Bus3D';
 
 const HeroSection = () => {
@@ -31,15 +31,16 @@ const HeroSection = () => {
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             <div className="glass-strong px-6 py-3 rounded-xl flex items-center gap-3 animate-slide-up" style={{ animationDelay: '0.2s' }}>
               <Clock className="w-5 h-5 text-primary" />
-              <span className="font-medium">Every 30 mins</span>
+              <span className="font-medium">Every 60 mins</span>
             </div>
             <div className="glass-strong px-6 py-3 rounded-xl flex items-center gap-3 animate-slide-up" style={{ animationDelay: '0.3s' }}>
               <MapPin className="w-5 h-5 text-accent" />
               <span className="font-medium">~25 Stops</span>
             </div>
             <div className="glass-strong px-6 py-3 rounded-xl flex items-center gap-3 animate-slide-up" style={{ animationDelay: '0.4s' }}>
-              <Wifi className="w-5 h-5 text-primary" />
-              <span className="font-medium">Free WiFi</span>
+              {/* seat */}
+              <Armchair className="w-5 h-5 text-primary" />
+              <span className="font-medium">Comfortable Seats</span>
             </div>
             <div className="glass-strong px-6 py-3 rounded-xl flex items-center gap-3 animate-slide-up" style={{ animationDelay: '0.5s' }}>
               <Plane className="w-5 h-5 text-accent" />

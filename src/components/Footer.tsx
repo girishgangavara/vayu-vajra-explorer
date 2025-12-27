@@ -19,7 +19,7 @@ const Footer = () => {
           {/* Links */}
           <div className="flex flex-wrap items-center justify-center gap-6">
             <a
-              href="https://www.mybmtc.com"
+              href="https://mybmtc.karnataka.gov.in/en"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-1"
@@ -46,8 +46,8 @@ const Footer = () => {
 
           {/* Copyright */}
           <p className="text-xs text-muted-foreground text-center md:text-right">
-            © {new Date().getFullYear()} Vayu Vajra Service<br />
-            An initiative by BMTC, Government of Karnataka
+            © {new Date().getFullYear()} KIA-15 Vayu Vajra Service<br />
+            An initiative by BMTC-Depot-18 and Girish, Government of Karnataka
           </p>
         </div>
       </div>

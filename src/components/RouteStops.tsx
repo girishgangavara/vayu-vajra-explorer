@@ -1,24 +1,52 @@
 import { MapPin, Plane, Building2 } from 'lucide-react';
+import { useState } from 'react';
 
-const stops = [
-  { name: "Vydehi Hospital", type: "origin", time: "0 min" },
-  { name: "ITPL Main Gate", type: "stop", time: "5 min" },
-  { name: "Whitefield Bus Stand", type: "major", time: "10 min" },
-  { name: "Mahadevapura", type: "stop", time: "18 min" },
-  { name: "KR Puram", type: "major", time: "25 min" },
-  { name: "Tin Factory", type: "stop", time: "30 min" },
-  { name: "Banaswadi", type: "stop", time: "38 min" },
-  { name: "Kasturi Nagar", type: "stop", time: "42 min" },
-  { name: "Kalyan Nagar", type: "stop", time: "48 min" },
-  { name: "HBR Layout", type: "stop", time: "52 min" },
-  { name: "Hebbal", type: "major", time: "58 min" },
-  { name: "Esteem Mall", type: "stop", time: "62 min" },
-  { name: "Yelahanka", type: "major", time: "70 min" },
-  { name: "Trumpet Flyover", type: "stop", time: "80 min" },
-  { name: "Kempegowda International Airport", type: "destination", time: "90 min" },
+const kia15AStopsReverse = [
+  { name: "Kempegowda International Airport (KIA)", type: "origin" },
+  { name: "Beguru", type: "stop" },
+  { name: "Singahalli", type: "stop" },
+  { name: "Budigere", type: "stop" },
+  { name: "Thirumenahalli", type: "stop" },
+  { name: "Mandur", type: "stop" },
+  { name: "Grandwell / Prestige Tranquility", type: "stop" },
+  { name: "Budigere Cross", type: "stop" },
+  { name: "Katamalluru Cross", type: "stop" },
+  { name: "Safal / Sonnenahalli Gate", type: "stop" },
+  { name: "Seegehalli", type: "stop" },
+  { name: "Belathur", type: "stop" },
+  { name: "Kadugodi", type: "stop" },
+  { name: "Hope Farm", type: "major" },
+  { name: "Whitefield", type: "major" },
+  { name: "Varthur Kodi", type: "stop" },
+  { name: "Kundalahalli Gate", type: "stop" },
+  { name: "CMRIT", type: "stop" },
+  { name: "Graphite India", type: "stop" },
+  { name: "Vydehi", type: "destination" },
 ];
 
+
+const kia15Stops = [
+  { name: "Vydehi / Whitefield TTMC", type: "origin" },
+  { name: "ITPL", type: "major" },
+  { name: "Hope Farm", type: "major" },
+  { name: "Kadugodi", type: "stop" },
+  { name: "Belathur", type: "stop" },
+  { name: "Seegehalli", type: "stop" },
+  { name: "Safal / Sonnenahalli Gate", type: "stop" },
+  { name: "Katamalluru Cross", type: "stop" },
+  { name: "Budigere Cross", type: "stop" },
+  { name: "Grandwell / Prestige Tranquility", type: "stop" },
+  { name: "Mandur", type: "stop" },
+  { name: "Thirumenahalli", type: "stop" },
+  { name: "Budigere", type: "stop" },
+  { name: "Singahalli", type: "stop" },
+  { name: "Beguru", type: "stop" },
+  { name: "Kempegowda International Airport (KIA)", type: "destination" },
+];
+
+
 const RouteStops = () => {
+  const [isKia15Active, setIsKia15Active] = useState (true);
   return (
     <section id="route" className="py-24 relative">
       <div className="container mx-auto px-4">
@@ -31,11 +59,29 @@ const RouteStops = () => {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto relative">
+        <div className="flex justify-center gap-16 mb-12">
+          <div
+            onClick={() => setIsKia15Active(false)}
+            className={`cursor-pointer ${!isKia15Active ? 'border-b-4 border-accent pb-2' : ''}`}
+          >
+            <h3 className="text-2xl font-semibold text-center">KIA-15</h3>
+          </div>
+
+          <div
+            onClick={() => setIsKia15Active(true)}
+            className={`cursor-pointer ${isKia15Active ? 'border-b-4 border-accent pb-2' : ''}`}
+          >
+            <h3 className="text-2xl font-semibold text-center">KIA-15A</h3>
+          </div>
+        </div>
+
+
+       {isKia15Active ? (
+         <div className="max-w-4xl mx-auto relative">
           {/* Timeline line */}
           <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-1 route-line transform -translate-x-1/2 rounded-full" />
 
-          {stops.map((stop, index) => (
+          {kia15AStopsReverse.map((stop, index) => (
             <div
               key={stop.name}
               className={`relative flex items-center gap-4 md:gap-8 mb-8 ${
@@ -59,7 +105,64 @@ const RouteStops = () => {
                   }`}>
                     {stop.name}
                   </h3>
-                  <p className="text-sm text-muted-foreground">{stop.time} from start</p>
+                  {/* <p className="text-sm text-muted-foreground">{stop.time} from start</p> */}
+                </div>
+              </div>
+
+              {/* Timeline node */}
+              <div className="absolute left-8 md:left-1/2 transform -translate-x-1/2 z-10">
+                <div className={`w-10 h-10 rounded-full flex items-center justify-center ${
+                  stop.type === 'origin' 
+                    ? 'bg-gradient-to-br from-accent to-accent/80 shadow-gold' 
+                    : stop.type === 'destination' 
+                    ? 'bg-gradient-to-br from-primary to-primary/80 shadow-glow' 
+                    : stop.type === 'major'
+                    ? 'bg-secondary border-2 border-primary'
+                    : 'bg-secondary border-2 border-muted'
+                }`}>
+                  {stop.type === 'origin' && <Plane className="w-5 h-5 text-primary-foreground" />}
+                  {stop.type === 'destination' && <Building2 className="w-5 h-5 text-accent-foreground" />}
+                  {(stop.type === 'stop' || stop.type === 'major') && (
+                    <MapPin className={`w-4 h-4 ${stop.type === 'major' ? 'major' : 'text-muted-foreground'}`} />
+                  )}
+                </div>
+              </div>
+
+              {/* Empty space for alignment */}
+              <div className="hidden md:block flex-1" />
+            </div>
+          ))}
+        </div>
+        ) : (
+        <div className="max-w-4xl mx-auto relative">
+          {/* Timeline line */}
+          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-1 route-line transform -translate-x-1/2 rounded-full" />
+
+          {kia15Stops.map((stop, index) => (
+            <div
+              key={stop.name}
+              className={`relative flex items-center gap-4 md:gap-8 mb-8 ${
+                index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+              }`}
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              {/* Content card */}
+              <div className={`flex-1 ml-16 md:ml-0 ${index % 2 === 0 ? 'md:text-right md:pr-12' : 'md:pl-12'}`}>
+                <div className={`glass-strong p-4 rounded-xl inline-block ${
+                  stop.type === 'origin' || stop.type === 'destination' 
+                    ? 'border-accent/50' 
+                    : stop.type === 'major' 
+                    ? 'border-primary/50' 
+                    : ''
+                }`}>
+                  <h3 className={`font-semibold text-lg ${
+                    stop.type === 'origin' || stop.type === 'destination' 
+                      ? 'text-gradient-gold' 
+                      : 'text-foreground'
+                  }`}>
+                    {stop.name}
+                  </h3>
+                  {/* <p className="text-sm text-muted-foreground">{stop.time} from start</p> */}
                 </div>
               </div>
 
@@ -87,6 +190,7 @@ const RouteStops = () => {
             </div>
           ))}
         </div>
+        )}
       </div>
     </section>
   );

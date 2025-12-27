@@ -37,7 +37,7 @@ const Schedule = () => {
             <span className="text-gradient">Schedule</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Buses run every 30 minutes from early morning to midnight
+            Buses run every 1 hour from early morning to midnight
           </p>
         </div>
 

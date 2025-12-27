@@ -20,7 +20,7 @@ const AppDownload = () => {
               </h2>
               
               <p className="text-muted-foreground text-lg max-w-xl mx-auto mb-8">
-                Get the dedicated KIA-15 route app for real-time tracking, schedules, and notifications. Available on both platforms!
+                Get the dedicated KIA-15 route app for Crew Details, real-time tracking, schedules, and notifications. Available on both platforms!
               </p>
 
               <div className="flex items-center justify-center gap-2 mb-8">
@@ -50,7 +50,7 @@ const AppDownload = () => {
                 </a>
 
                 <a 
-                  href="https://apps.apple.com/search?term=kia-15" 
+                  href="https://apps.apple.com/in/app/kia-15/id6751138454" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="group flex items-center gap-3 glass px-6 py-4 rounded-xl hover:bg-primary/20 transition-all hover:scale-105 border border-border/50"
@@ -69,7 +69,7 @@ const AppDownload = () => {
               </div>
 
               <p className="text-xs text-muted-foreground mt-6">
-                * The KIA-15 app is developed by Friends of BMTC community
+                * The KIA-15 app is developed by Girish and support from Depot-18 authorities.
               </p>
             </div>
           </div>

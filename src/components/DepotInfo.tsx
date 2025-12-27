@@ -9,7 +9,7 @@ const DepotInfo = () => {
             <span className="text-gradient">Operating Depot</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Managed by BMTC's dedicated airport service division
+            Managed by BMTC's Whitefield 18 division
           </p>
         </div>
 
@@ -72,7 +72,7 @@ const DepotInfo = () => {
                 <Bus className="w-6 h-6 text-accent" />
               </div>
               <div>
-                <p className="text-3xl font-bold text-gradient-gold">15+</p>
+                <p className="text-3xl font-bold text-gradient-gold">6+</p>
                 <p className="text-sm text-muted-foreground">Premium Volvo Buses</p>
               </div>
             </div>
@@ -82,7 +82,7 @@ const DepotInfo = () => {
                 <Users className="w-6 h-6 text-primary" />
               </div>
               <div>
-                <p className="text-3xl font-bold text-gradient">50+</p>
+                <p className="text-3xl font-bold text-gradient">100+</p>
                 <p className="text-sm text-muted-foreground">Trained Staff & Drivers</p>
               </div>
             </div>
