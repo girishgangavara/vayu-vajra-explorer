@@ -1,4 +1,4 @@
-import { Wifi, Wind, Tv, Armchair, Luggage, CreditCard, Volume2, Accessibility } from 'lucide-react';
+import { Wind, Armchair, Luggage, CreditCard, Volume2, Accessibility, Tv } from 'lucide-react';
 
 const amenities = [
   {
@@ -8,15 +8,9 @@ const amenities = [
     color: "text-blue-400"
   },
   {
-    icon: Wifi,
-    title: "Free WiFi",
-    description: "Stay connected throughout your journey",
-    color: "text-primary"
-  },
-  {
     icon: Armchair,
-    title: "Push-back Seats",
-    description: "Comfortable reclining seats for relaxation",
+    title: "Comfortable Seats",
+    description: "Premium reclining seats for relaxation",
     color: "text-purple-400"
   },
   {
@@ -34,7 +28,7 @@ const amenities = [
   {
     icon: CreditCard,
     title: "Digital Payments",
-    description: "UPI, Cards & BMTC Smart Cards accepted",
+    description: "UPI & Cash payments accepted",
     color: "text-orange-400"
   },
   {

@@ -24,8 +24,8 @@ const DepotInfo = () => {
                   <Building className="w-8 h-8 text-primary-foreground" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-foreground">Whitefield Depot</h3>
-                  <p className="text-muted-foreground">BMTC Division - 45</p>
+                  <h3 className="text-2xl font-bold text-foreground">Depot-18 Whitefield</h3>
+                  <p className="text-muted-foreground">BMTC Airport Division</p>
                 </div>
               </div>
 
@@ -44,11 +44,21 @@ const DepotInfo = () => {
                 <div className="flex items-start gap-3">
                   <Phone className="w-5 h-5 text-primary mt-0.5" />
                   <div>
-                    <p className="font-medium text-foreground">Contact</p>
-                    <p className="text-sm text-muted-foreground">
-                      BMTC Helpline: 1800-425-1663<br />
-                      Depot Office: 080-2845-xxxx
-                    </p>
+                    <p className="font-medium text-foreground">Helpline Numbers</p>
+                    <div className="text-sm text-muted-foreground space-y-1">
+                      <p className="flex items-center gap-2">
+                        <span className="text-accent font-medium">Vydehi TTMC:</span>
+                        <a href="tel:7760991125" className="text-primary hover:underline">7760991125</a>
+                      </p>
+                      <p className="flex items-center gap-2">
+                        <span className="text-accent font-medium">Airport T1:</span>
+                        <a href="tel:7760991269" className="text-primary hover:underline">7760991269</a>
+                      </p>
+                      <p className="flex items-center gap-2">
+                        <span className="text-accent font-medium">Airport T2:</span>
+                        <a href="tel:7760991250" className="text-primary hover:underline">7760991250</a>
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
