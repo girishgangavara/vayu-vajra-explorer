@@ -1,4 +1,4 @@
-import { Ticket, CreditCard, Smartphone, Info } from 'lucide-react';
+import { Ticket, Banknote, Smartphone, Info, Calendar } from 'lucide-react';
 
 const FareInfo = () => {
   return (
@@ -32,6 +32,21 @@ const FareInfo = () => {
                     Whitefield/Vydehi to Kempegowda International Airport
                   </p>
                 </div>
+
+                {/* Monthly Pass */}
+                <div className="relative mt-4 bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl p-6 border border-primary/30">
+                  <div className="flex items-center gap-3 mb-4">
+                    <Calendar className="w-6 h-6 text-primary" />
+                    <span className="text-sm font-medium text-primary uppercase tracking-wider">Monthly Pass</span>
+                  </div>
+                  <div className="flex items-baseline gap-2 mb-2">
+                    <span className="text-4xl font-bold text-gradient">₹4,000</span>
+                    <span className="text-muted-foreground">/month</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    Available at Vydehi TTMC & Kadugodi via Tummoc App
+                  </p>
+                </div>
               </div>
 
               {/* Payment methods */}
@@ -39,26 +54,26 @@ const FareInfo = () => {
                 <h3 className="font-semibold text-lg text-foreground mb-4">Payment Methods</h3>
                 
                 <div className="flex items-center gap-4 p-4 glass rounded-xl">
-                  <CreditCard className="w-6 h-6 text-primary" />
+                  <Banknote className="w-6 h-6 text-green-500" />
                   <div>
-                    <p className="font-medium text-foreground">Cash & Cards</p>
-                    <p className="text-sm text-muted-foreground">Debit/Credit cards accepted</p>
+                    <p className="font-medium text-foreground">Cash</p>
+                    <p className="text-sm text-muted-foreground">Pay directly to the conductor</p>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-4 p-4 glass rounded-xl">
-                  <Smartphone className="w-6 h-6 text-green-500" />
+                  <Smartphone className="w-6 h-6 text-primary" />
                   <div>
                     <p className="font-medium text-foreground">UPI Payments</p>
                     <p className="text-sm text-muted-foreground">GPay, PhonePe, Paytm & more</p>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4 p-4 glass rounded-xl">
+                <div className="flex items-center gap-4 p-4 glass rounded-xl bg-gradient-to-r from-orange-500/10 to-transparent border border-orange-500/20">
                   <div className="w-6 h-6 bg-orange-500 rounded flex items-center justify-center text-xs font-bold text-white">T</div>
                   <div>
                     <p className="font-medium text-foreground">Tummoc App</p>
-                    <p className="text-sm text-muted-foreground">Book tickets in advance</p>
+                    <p className="text-sm text-muted-foreground">Monthly pass purchase & booking</p>
                   </div>
                 </div>
               </div>

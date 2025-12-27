@@ -2,25 +2,29 @@ import { Clock, Sun, Sunset, Moon } from 'lucide-react';
 
 const scheduleData = {
   fromWhitefield: {
-    morning: ["4:00 AM", "4:30 AM", "5:00 AM", "5:30 AM", "6:00 AM", "6:30 AM", "7:00 AM", "7:30 AM", "8:00 AM"],
-    afternoon: ["8:30 AM", "9:00 AM", "9:30 AM", "10:00 AM", "10:30 AM", "11:00 AM", "11:30 AM", "12:00 PM", "12:30 PM", "1:00 PM", "1:30 PM", "2:00 PM"],
-    evening: ["2:30 PM", "3:00 PM", "3:30 PM", "4:00 PM", "4:30 PM", "5:00 PM", "5:30 PM", "6:00 PM", "6:30 PM", "7:00 PM", "7:30 PM", "8:00 PM"],
-    night: ["8:30 PM", "9:00 PM", "9:30 PM", "10:00 PM", "10:30 PM", "11:00 PM"]
+    morning: ["04:15 AM", "05:15 AM", "06:15 AM", "07:15 AM", "07:40 AM", "08:20 AM", "09:20 AM", "10:20 AM", "10:45 AM", "11:15 AM", "11:45 AM"],
+    evening: ["02:40 PM", "03:10 PM", "03:30 PM", "04:30 PM", "05:25 PM", "06:15 PM", "06:40 PM", "07:55 PM", "08:50 PM", "09:50 PM", "10:40 PM"]
   },
   fromAirport: {
-    morning: ["5:30 AM", "6:00 AM", "6:30 AM", "7:00 AM", "7:30 AM", "8:00 AM", "8:30 AM", "9:00 AM", "9:30 AM"],
-    afternoon: ["10:00 AM", "10:30 AM", "11:00 AM", "11:30 AM", "12:00 PM", "12:30 PM", "1:00 PM", "1:30 PM", "2:00 PM", "2:30 PM", "3:00 PM", "3:30 PM"],
-    evening: ["4:00 PM", "4:30 PM", "5:00 PM", "5:30 PM", "6:00 PM", "6:30 PM", "7:00 PM", "7:30 PM", "8:00 PM", "8:30 PM", "9:00 PM", "9:30 PM"],
-    night: ["10:00 PM", "10:30 PM", "11:00 PM", "11:30 PM", "12:00 AM", "12:30 AM"]
+    morning: ["06:15 AM", "07:10 AM", "08:15 AM", "09:15 AM", "09:40 AM", "10:15 AM", "11:15 AM"],
+    afternoon: ["12:15 PM", "12:50 PM", "01:15 PM", "02:10 PM", "04:45 PM", "05:15 PM", "06:00 PM", "06:45 PM", "07:45 PM", "08:40 PM"],
+    nightService: [
+      { time: "12:40 AM", label: "15A" },
+      { time: "09:15 PM", label: "15A" },
+      { time: "10:00 PM", label: "15A" },
+      { time: "10:40 PM", label: "15A" },
+      { time: "11:45 PM", label: "15A" }
+    ]
   }
 };
 
-const TimeSlot = ({ time, index }: { time: string; index: number }) => (
+const TimeSlot = ({ time, index, label }: { time: string; index: number; label?: string }) => (
   <div 
-    className="glass px-3 py-2 rounded-lg text-sm font-medium text-foreground hover:bg-primary/20 transition-colors cursor-default"
+    className="glass px-3 py-2 rounded-lg text-sm font-medium text-foreground hover:bg-primary/20 transition-colors cursor-default flex items-center gap-1"
     style={{ animationDelay: `${index * 0.05}s` }}
   >
     {time}
+    {label && <span className="text-xs bg-red-500/20 text-red-400 px-1.5 py-0.5 rounded">{label}</span>}
   </div>
 );
 
@@ -65,35 +69,11 @@ const Schedule = () => {
 
               <div>
                 <div className="flex items-center gap-2 mb-3">
-                  <Sun className="w-4 h-4 text-primary" />
-                  <span className="text-sm font-medium text-primary">Afternoon</span>
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  {scheduleData.fromWhitefield.afternoon.map((time, i) => (
-                    <TimeSlot key={time} time={time} index={i} />
-                  ))}
-                </div>
-              </div>
-
-              <div>
-                <div className="flex items-center gap-2 mb-3">
                   <Sunset className="w-4 h-4 text-orange-400" />
                   <span className="text-sm font-medium text-orange-400">Evening</span>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {scheduleData.fromWhitefield.evening.map((time, i) => (
-                    <TimeSlot key={time} time={time} index={i} />
-                  ))}
-                </div>
-              </div>
-
-              <div>
-                <div className="flex items-center gap-2 mb-3">
-                  <Moon className="w-4 h-4 text-indigo-400" />
-                  <span className="text-sm font-medium text-indigo-400">Night</span>
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  {scheduleData.fromWhitefield.night.map((time, i) => (
                     <TimeSlot key={time} time={time} index={i} />
                   ))}
                 </div>
@@ -129,7 +109,7 @@ const Schedule = () => {
               <div>
                 <div className="flex items-center gap-2 mb-3">
                   <Sun className="w-4 h-4 text-primary" />
-                  <span className="text-sm font-medium text-primary">Afternoon</span>
+                  <span className="text-sm font-medium text-primary">Afternoon / Evening</span>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {scheduleData.fromAirport.afternoon.map((time, i) => (
@@ -140,26 +120,17 @@ const Schedule = () => {
 
               <div>
                 <div className="flex items-center gap-2 mb-3">
-                  <Sunset className="w-4 h-4 text-orange-400" />
-                  <span className="text-sm font-medium text-orange-400">Evening</span>
+                  <Moon className="w-4 h-4 text-red-400" />
+                  <span className="text-sm font-medium text-red-400">Night Service (KIA-15A)</span>
                 </div>
                 <div className="flex flex-wrap gap-2">
-                  {scheduleData.fromAirport.evening.map((time, i) => (
-                    <TimeSlot key={time} time={time} index={i} />
+                  {scheduleData.fromAirport.nightService.map((slot, i) => (
+                    <TimeSlot key={slot.time} time={slot.time} index={i} label={slot.label} />
                   ))}
                 </div>
-              </div>
-
-              <div>
-                <div className="flex items-center gap-2 mb-3">
-                  <Moon className="w-4 h-4 text-indigo-400" />
-                  <span className="text-sm font-medium text-indigo-400">Night</span>
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  {scheduleData.fromAirport.night.map((time, i) => (
-                    <TimeSlot key={time} time={time} index={i} />
-                  ))}
-                </div>
+                <p className="text-xs text-muted-foreground mt-2">
+                  * KIA-15A is only return trip from Airport to City in night. It covers entire Whitefield Area.
+                </p>
               </div>
             </div>
           </div>
