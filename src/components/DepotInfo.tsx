@@ -1,4 +1,109 @@
-import { Building, Phone, MapPin, Bus, Users, Shield } from 'lucide-react';
+import { Building, Phone, MapPin, Bus, Users, Shield, UserCircle, Building2 } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+
+const currentAuthorities = [
+  {
+    name: 'Mr. Mallikarjuna',
+    role: 'Depot 18 Manager',
+    photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face'
+  },
+  {
+    name: 'Mr. Suresh Kumar',
+    role: 'Assistant Traffic Controller',
+    photo: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face'
+  },
+  {
+    name: 'Mr. Rajashekar & Ms.',
+    role: 'Traffic Controller',
+    photo: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face'
+  },
+  {
+    name: 'Mr. Lokesh',
+    role: 'Depot-18 Administrator',
+    photo: 'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=150&h=150&fit=crop&crop=face'
+  }
+];
+
+const formerAuthorities = [
+  {
+    name: 'Mr. Satish S',
+    role: 'Former Depot Manager',
+    photo: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=face'
+  },
+  {
+    name: 'Mr. Janimiya Bhagawan',
+    role: 'Former Asst. Traffic Controller',
+    photo: 'https://images.unsplash.com/photo-1463453091185-61582044d556?w=150&h=150&fit=crop&crop=face'
+  }
+];
+
+const vydehiAuthorities = [
+  {
+    name: 'Mr. Raju',
+    role: 'Traffic Controller',
+    photo: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face'
+  },
+  {
+    name: 'Mr. Narayanaswamy',
+    role: 'Traffic Controller',
+    photo: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face'
+  },
+  {
+    name: 'Mr. Omkar Reddy',
+    role: 'Traffic Controller',
+    photo: 'https://images.unsplash.com/photo-1543132220-3ec99c6094dc?w=150&h=150&fit=crop&crop=face'
+  }
+];
+
+const kadugodiAuthorities = [
+  {
+    name: 'Mr. Subramani',
+    role: 'Assistant Traffic Inspector',
+    photo: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=150&h=150&fit=crop&crop=face'
+  },
+  {
+    name: 'Mr. Patil',
+    role: 'Traffic Controller',
+    photo: 'https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=150&h=150&fit=crop&crop=face'
+  },
+  {
+    name: 'Mr. Aniff',
+    role: 'Traffic Controller',
+    photo: 'https://images.unsplash.com/photo-1557862921-37829c790f19?w=150&h=150&fit=crop&crop=face'
+  },
+  {
+    name: 'Mr. Chandrashekar',
+    role: 'Traffic Controller',
+    photo: 'https://images.unsplash.com/photo-1552058544-f2b08422138a?w=150&h=150&fit=crop&crop=face'
+  }
+];
+
+interface AuthorityCardProps {
+  name: string;
+  role: string;
+  photo: string;
+  isFormer?: boolean;
+}
+
+const AuthorityCard = ({ name, role, photo, isFormer = false }: AuthorityCardProps) => (
+  <div className="flex flex-col items-center text-center p-4 bg-card/50 rounded-xl border border-border/30 hover:border-primary/40 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
+    <div className="relative mb-3">
+      <img 
+        src={photo} 
+        alt={name}
+        className="w-16 h-16 rounded-full object-cover border-2 border-primary/30"
+      />
+      {isFormer && (
+        <Badge variant="secondary" className="absolute -bottom-1 left-1/2 -translate-x-1/2 text-[10px] px-1.5">
+          Former
+        </Badge>
+      )}
+    </div>
+    <h4 className="font-semibold text-foreground text-sm">{name}</h4>
+    <p className="text-xs text-muted-foreground mt-1">{role}</p>
+  </div>
+);
 
 const DepotInfo = () => {
   return (
@@ -13,7 +118,7 @@ const DepotInfo = () => {
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 mb-16">
           {/* Main depot card */}
           <div className="glass-strong rounded-2xl p-8 shadow-card relative overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl" />
@@ -97,6 +202,87 @@ const DepotInfo = () => {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Depot 18 Authorities */}
+        <div className="max-w-5xl mx-auto mb-12">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
+              Depot 18 Authorities
+            </h3>
+            <p className="text-muted-foreground">Meet the dedicated team managing operations</p>
+          </div>
+
+          {/* Current Authorities */}
+          <Card className="glass border-border/50 mb-6">
+            <CardHeader className="pb-4">
+              <CardTitle className="flex items-center gap-2 text-lg">
+                <UserCircle className="w-5 h-5 text-primary" />
+                Current Authorities
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {currentAuthorities.map((auth, index) => (
+                  <AuthorityCard key={index} {...auth} />
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Former Authorities */}
+          <Card className="glass border-border/50">
+            <CardHeader className="pb-4">
+              <CardTitle className="flex items-center gap-2 text-lg">
+                <Users className="w-5 h-5 text-muted-foreground" />
+                Former Authorities
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {formerAuthorities.map((auth, index) => (
+                  <AuthorityCard key={index} {...auth} isFormer />
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Vydehi TTMC & Kadugodi Bus Station */}
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
+          {/* Vydehi TTMC Authorities */}
+          <Card className="glass border-border/50">
+            <CardHeader className="pb-4">
+              <CardTitle className="flex items-center gap-2 text-lg">
+                <Building2 className="w-5 h-5 text-primary" />
+                Vydehi TTMC Authorities
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-2 gap-4">
+                {vydehiAuthorities.map((auth, index) => (
+                  <AuthorityCard key={index} {...auth} />
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Kadugodi Bus Station */}
+          <Card className="glass border-border/50">
+            <CardHeader className="pb-4">
+              <CardTitle className="flex items-center gap-2 text-lg">
+                <Building2 className="w-5 h-5 text-primary" />
+                Kadugodi Bus Station
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-2 gap-4">
+                {kadugodiAuthorities.map((auth, index) => (
+                  <AuthorityCard key={index} {...auth} />
+                ))}
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>
