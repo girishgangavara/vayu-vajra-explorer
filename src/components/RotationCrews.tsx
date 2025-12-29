@@ -1,54 +1,56 @@
-import { Users, Calendar } from 'lucide-react';
+import { Users, Calendar, UserCheck } from 'lucide-react';
 
 const crewData = [
   {
     busNumber: "KIA-15/1",
     crews: [
-      { name: "HariKrishna", days: ["Monday", "Thursday", "Saturday"] },
-      { name: "Ananda", days: ["Tuesday", "Friday", "Sunday"] }
+      { name: "HariKrishna", photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face", days: ["Monday", "Thursday", "Saturday"] },
+      { name: "Ananda", photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face", days: ["Tuesday", "Friday", "Sunday"] }
     ]
   },
   {
     busNumber: "KIA-15/2",
     crews: [
-      { name: "Narayanaswamy", days: ["Monday", "Thursday", "Saturday"] },
-      { name: "Sivappa", days: ["Tuesday", "Friday", "Sunday"] }
+      { name: "Narayanaswamy", photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face", days: ["Monday", "Thursday", "Saturday"] },
+      { name: "Sivappa", photo: "https://images.unsplash.com/photo-1599566150163-29194dcabd9c?w=150&h=150&fit=crop&crop=face", days: ["Tuesday", "Friday", "Sunday"] }
     ]
   },
   {
     busNumber: "KIA-15/3",
     crews: [
-      { name: "Raghunathreddy", days: ["Monday", "Thursday", "Saturday"] },
-      { name: "Chandrashekar", days: ["Tuesday", "Friday", "Sunday"] }
+      { name: "Raghunathreddy", photo: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=face", days: ["Monday", "Thursday", "Saturday"] },
+      { name: "Chandrashekar", photo: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&h=150&fit=crop&crop=face", days: ["Tuesday", "Friday", "Sunday"] }
     ]
   },
   {
     busNumber: "KIA-15/4",
     crews: [
-      { name: "Narayanaswamy", days: ["Monday", "Thursday", "Saturday"] },
-      { name: "Babu", days: ["Tuesday", "Friday", "Sunday"] }
+      { name: "Narayanaswamy", photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face", days: ["Monday", "Thursday", "Saturday"] },
+      { name: "Babu", photo: "https://images.unsplash.com/photo-1552058544-f2b08422138a?w=150&h=150&fit=crop&crop=face", days: ["Tuesday", "Friday", "Sunday"] }
     ]
   },
   {
     busNumber: "KIA-15/5",
     crews: [
-      { name: "Maruthi", days: ["Monday", "Thursday", "Saturday"] },
-      { name: "SivaRaman", days: ["Tuesday", "Friday", "Sunday"] }
+      { name: "Maruthi", photo: "https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?w=150&h=150&fit=crop&crop=face", days: ["Monday", "Thursday", "Saturday"] },
+      { name: "SivaRaman", photo: "https://images.unsplash.com/photo-1548449112-96a38a643324?w=150&h=150&fit=crop&crop=face", days: ["Tuesday", "Friday", "Sunday"] }
     ]
   },
   {
     busNumber: "KIA-15/7",
     crews: [
-      { name: "Basappa", days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"] }
+      { name: "Basappa", photo: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face", days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"] }
     ]
   }
 ];
 
-const RotationCrews = () => {
-  const getInitials = (name: string) => {
-    return name.slice(0, 2).toUpperCase();
-  };
+const reliefCrews = [
+  { name: "Venkatesh", photo: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=150&h=150&fit=crop&crop=face", role: "Relief Driver" },
+  { name: "Ramesh", photo: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&h=150&fit=crop&crop=face", role: "Relief Driver" },
+  { name: "Suresh", photo: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face", role: "Backup Conductor" }
+];
 
+const RotationCrews = () => {
   const formatDays = (days: string[]) => {
     if (days.length === 6 && !days.includes("Sunday")) {
       return "Mon - Sat";
@@ -92,15 +94,16 @@ const RotationCrews = () => {
               </div>
 
               <div className="space-y-4">
-                {bus.crews.map((crew, crewIndex) => (
+                {bus.crews.map((crew) => (
                   <div
                     key={crew.name}
                     className="flex items-center gap-4 p-3 rounded-xl bg-background/50 border border-border/50 hover:border-primary/30 transition-colors"
                   >
-                    {/* Avatar placeholder */}
-                    <div className="w-14 h-14 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 border-2 border-primary/30 flex items-center justify-center flex-shrink-0">
-                      <span className="text-primary font-bold text-lg">{getInitials(crew.name)}</span>
-                    </div>
+                    <img 
+                      src={crew.photo} 
+                      alt={crew.name}
+                      className="w-14 h-14 rounded-full object-cover border-2 border-primary/30 flex-shrink-0"
+                    />
                     
                     <div className="flex-1 min-w-0">
                       <h4 className="font-semibold text-foreground truncate">{crew.name}</h4>
@@ -116,6 +119,40 @@ const RotationCrews = () => {
           ))}
         </div>
 
+        {/* Relief/Backup Crews Section */}
+        <div className="mt-16">
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 mb-4">
+              <UserCheck className="w-4 h-4 text-accent" />
+              <span className="text-sm font-medium text-accent">Backup Support</span>
+            </div>
+            <h3 className="text-2xl md:text-3xl font-bold text-foreground">
+              Relief / Backup Crews
+            </h3>
+            <p className="text-muted-foreground mt-2">
+              Our relief team steps in when regular crews are off duty
+            </p>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-6">
+            {reliefCrews.map((crew, index) => (
+              <div
+                key={crew.name}
+                className="glass-card rounded-2xl p-6 hover:border-accent/40 transition-all duration-300 text-center min-w-[200px]"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <img 
+                  src={crew.photo} 
+                  alt={crew.name}
+                  className="w-20 h-20 rounded-full object-cover border-3 border-accent/40 mx-auto mb-4"
+                />
+                <h4 className="font-semibold text-foreground text-lg">{crew.name}</h4>
+                <p className="text-sm text-accent mt-1">{crew.role}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* Legend */}
         <div className="mt-12 text-center">
           <div className="inline-flex flex-wrap justify-center gap-4 px-6 py-4 rounded-2xl bg-background/50 border border-border/50">
@@ -125,7 +162,7 @@ const RotationCrews = () => {
             </div>
             <div className="flex items-center gap-2">
               <div className="w-3 h-3 rounded-full bg-accent"></div>
-              <span className="text-sm text-muted-foreground">Weekly Schedule</span>
+              <span className="text-sm text-muted-foreground">Relief / Backup</span>
             </div>
           </div>
         </div>
