@@ -60,7 +60,7 @@ const kadugodiAuthorities = [
   {
     name: 'Mr. Subramani',
     role: 'Assistant Traffic Inspector',
-    photo: 'https://drive.google.com/file/d/125wLTJmSlyqGfXEeot4pDvmSG2Utt_cF/view?usp=drive_link'
+    photo: 'https://drive.google.com/file/d/125wLTJmSlyqGfXEeot4pDvmSG2Utt_cF/view?usp=sharing'
   },
   {
     name: 'Mr. Patil',
