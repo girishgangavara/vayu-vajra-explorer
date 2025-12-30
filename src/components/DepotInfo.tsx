@@ -10,17 +10,17 @@ const currentAuthorities = [
   },
   {
     name: 'Mr. Suresh Kumar',
-    role: 'Assistant Traffic Controller',
+    role: 'Assistant Traffic Sub Inspector',
     photo: 'https://lfuthmexacgvbyjufbih.supabase.co/storage/v1/object/public/vayuvajra/sureshsir.png'
   },
   {
     name: 'Mr. Rajashekar',
-    role: 'Traffic Controller',
+    role: 'Traffic Inspector',
     photo: 'https://lfuthmexacgvbyjufbih.supabase.co/storage/v1/object/public/vayuvajra/rajashekarsir.png'
   },
   {
     name: 'Ms.Vidya',
-    role: 'Traffic Controller',
+    role: 'Traffic Inspector',
     photo: 'https://lfuthmexacgvbyjufbih.supabase.co/storage/v1/object/public/vayuvajra/vidya.png'
   },
   {
