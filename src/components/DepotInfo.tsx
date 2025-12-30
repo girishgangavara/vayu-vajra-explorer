@@ -14,7 +14,7 @@ const currentAuthorities = [
     photo: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face'
   },
   {
-    name: 'Mr. Rajashekar & Ms.',
+    name: 'Mr. Rajashekar & Ms.Vidya',
     role: 'Traffic Controller',
     photo: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face'
   },
