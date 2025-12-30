@@ -4,36 +4,36 @@ const crewData = [
   {
     busNumber: "KIA-15/1",
     crews: [
-      { name: "HariKrishna", photo: "https://firebasestorage.googleapis.com/v0/b/kia-5d-crewlist.appspot.com/o/harikrishna.png?alt=media&token=aecaaf5e-d8fa-45b8-854d-66b16f1b9ea5", days: ["Monday", "Thursday", "Saturday"] },
+      { name: "HariKrishna (1295)", photo: "https://firebasestorage.googleapis.com/v0/b/kia-5d-crewlist.appspot.com/o/harikrishna.png?alt=media&token=aecaaf5e-d8fa-45b8-854d-66b16f1b9ea5", days: ["Monday", "Thursday", "Saturday"] },
       { name: "Ananda", photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face", days: ["Tuesday", "Friday", "Sunday"] }
     ]
   },
   {
     busNumber: "KIA-15/2",
     crews: [
-      { name: "Narayanaswamy", photo: "https://firebasestorage.googleapis.com/v0/b/kia-5d-crewlist.appspot.com/o/Narayanaswamy.jpg?alt=media&token=4b340f82-bd1d-4b4a-b75c-0dee8b40b0b4", days: ["Monday", "Thursday", "Saturday"] },
+      { name: "Narayanaswamy (4817)", photo: "https://firebasestorage.googleapis.com/v0/b/kia-5d-crewlist.appspot.com/o/Narayanaswamy.jpg?alt=media&token=4b340f82-bd1d-4b4a-b75c-0dee8b40b0b4", days: ["Monday", "Thursday", "Saturday"] },
       { name: "Sivappa", photo: "https://images.unsplash.com/photo-1599566150163-29194dcabd9c?w=150&h=150&fit=crop&crop=face", days: ["Tuesday", "Friday", "Sunday"] }
     ]
   },
   {
     busNumber: "KIA-15/3",
     crews: [
-      { name: "Raghunathreddy", photo: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=face", days: ["Monday", "Thursday", "Saturday"] },
-      { name: "Chandrashekar", photo: "https://firebasestorage.googleapis.com/v0/b/kia-5d-crewlist.appspot.com/o/IMG_20240425_221946_907-removebg-preview.png?alt=media&token=c90da2ea-88f0-4da6-b906-151454d3617d", days: ["Tuesday", "Friday", "Sunday"] }
+      { name: "Raghunathreddy (451)", photo: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=face", days: ["Monday", "Thursday", "Saturday"] },
+      { name: "Chandrashekar (403)", photo: "https://firebasestorage.googleapis.com/v0/b/kia-5d-crewlist.appspot.com/o/IMG_20240425_221946_907-removebg-preview.png?alt=media&token=c90da2ea-88f0-4da6-b906-151454d3617d", days: ["Tuesday", "Friday", "Sunday"] }
     ]
   },
   {
     busNumber: "KIA-15/4",
     crews: [
-      { name: "Narayanaswamy", photo: "https://firebasestorage.googleapis.com/v0/b/kia-5d-crewlist.appspot.com/o/narayanaswamy-removebg-preview.png?alt=media&token=415360a3-c4c6-47d5-a87d-ba98b23667b8", days: ["Monday", "Thursday", "Saturday"] },
-      { name: "Babu", photo: "https://images.unsplash.com/photo-1552058544-f2b08422138a?w=150&h=150&fit=crop&crop=face", days: ["Tuesday", "Friday", "Sunday"] }
+      { name: "Narayanaswamy (2197)", photo: "https://firebasestorage.googleapis.com/v0/b/kia-5d-crewlist.appspot.com/o/narayanaswamy-removebg-preview.png?alt=media&token=415360a3-c4c6-47d5-a87d-ba98b23667b8", days: ["Monday", "Thursday", "Saturday"] },
+      { name: "Babu (1415)", photo: "https://images.unsplash.com/photo-1552058544-f2b08422138a?w=150&h=150&fit=crop&crop=face", days: ["Tuesday", "Friday", "Sunday"] }
     ]
   },
   {
     busNumber: "KIA-15/5",
     crews: [
-      { name: "Maruthi", photo: "https://firebasestorage.googleapis.com/v0/b/kia-5d-crewlist.appspot.com/o/IMG_20240425_223438-removebg-preview.png?alt=media&token=26071e20-4de4-479c-a8fa-8c18dafde5bc", days: ["Monday", "Thursday", "Saturday"] },
-      { name: "SivaRaman", photo: "https://firebasestorage.googleapis.com/v0/b/kia-5d-crewlist.appspot.com/o/IMG_20240425_222312_317-removebg-preview.png?alt=media&token=f6a58a69-6f17-4a10-9aca-651d99aea684", days: ["Tuesday", "Friday", "Sunday"] }
+      { name: "Maruthi (2959)", photo: "https://firebasestorage.googleapis.com/v0/b/kia-5d-crewlist.appspot.com/o/IMG_20240425_223438-removebg-preview.png?alt=media&token=26071e20-4de4-479c-a8fa-8c18dafde5bc", days: ["Monday", "Thursday", "Saturday"] },
+      { name: "SivaRaman (2250)", photo: "https://firebasestorage.googleapis.com/v0/b/kia-5d-crewlist.appspot.com/o/IMG_20240425_222312_317-removebg-preview.png?alt=media&token=f6a58a69-6f17-4a10-9aca-651d99aea684", days: ["Tuesday", "Friday", "Sunday"] }
     ]
   },
   {
@@ -45,9 +45,8 @@ const crewData = [
 ];
 
 const reliefCrews = [
-  { name: "Ravikumar", photo: "https://firebasestorage.googleapis.com/v0/b/kia-5d-crewlist.appspot.com/o/IMG_20240116_230603_135-removebg-preview.png?alt=media&token=53a4da18-5598-4ceb-9b24-c4c6fecc12cd", role: "Relief Driver" },
-  { name: "Ramesh", photo: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&h=150&fit=crop&crop=face", role: "Relief Driver" },
-  { name: "Suresh", photo: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face", role: "Backup Conductor" }
+  { name: "Ravikumar (10095)", photo: "https://firebasestorage.googleapis.com/v0/b/kia-5d-crewlist.appspot.com/o/IMG_20240116_230603_135-removebg-preview.png?alt=media&token=53a4da18-5598-4ceb-9b24-c4c6fecc12cd", role: "Relief Driver" },
+  { name: "Keshava (5483)", photo: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&h=150&fit=crop&crop=face", role: "Relief Driver" },
 ];
 
 const RotationCrews = () => {
