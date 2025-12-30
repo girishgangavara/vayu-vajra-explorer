@@ -11,12 +11,12 @@ const currentAuthorities = [
   {
     name: 'Mr. Suresh Kumar',
     role: 'Assistant Traffic Controller',
-    photo: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face'
+    photo: 'https://lfuthmexacgvbyjufbih.supabase.co/storage/v1/object/public/vayuvajra/sureshsir.png'
   },
   {
     name: 'Mr. Rajashekar',
     role: 'Traffic Controller',
-    photo: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face'
+    photo: 'https://lfuthmexacgvbyjufbih.supabase.co/storage/v1/object/public/vayuvajra/rajashekarsir.png'
   },
   {
     name: 'Ms.Vidya',
@@ -31,7 +31,7 @@ const currentAuthorities = [
   {
     name: 'Mr. Chalapathi',
     role: 'Depot-18 Desiel Department Incharge',
-    photo: 'https://lfuthmexacgvbyjufbih.supabase.co/storage/v1/object/public/vayuvajra/Subramanisir.png'
+    photo: ''
   }
 ];
 
@@ -44,7 +44,7 @@ const formerAuthorities = [
   {
     name: 'Mr. Janimiya Bhagawan',
     role: 'Former Asst. Traffic Controller',
-    photo: 'https://images.unsplash.com/photo-1463453091185-61582044d556?w=150&h=150&fit=crop&crop=face'
+    photo: ''
   }
 ];
 
@@ -57,7 +57,7 @@ const vydehiAuthorities = [
   {
     name: 'Mr. Narayanaswamy',
     role: 'Traffic Controller',
-    photo: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face'
+    photo: ''
   },
   {
     name: 'Mr. Omkar Reddy',
@@ -76,16 +76,6 @@ const kadugodiAuthorities = [
     name: 'Mr. Patil',
     role: 'Traffic Controller',
     photo: 'https://lfuthmexacgvbyjufbih.supabase.co/storage/v1/object/public/vayuvajra/Patil.png'
-  },
-  {
-    name: 'Mr. Mohammed Anif',
-    role: 'Traffic Controller',
-    photo: 'https://images.unsplash.com/photo-1557862921-37829c790f19?w=150&h=150&fit=crop&crop=face'
-  },
-  {
-    name: 'Mr. Chandrashekar',
-    role: 'Traffic Controller',
-    photo: 'https://images.unsplash.com/photo-1552058544-f2b08422138a?w=150&h=150&fit=crop&crop=face'
   }
 ];
 
