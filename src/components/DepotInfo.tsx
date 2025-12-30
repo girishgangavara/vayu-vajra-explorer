@@ -6,7 +6,7 @@ const currentAuthorities = [
   {
     name: 'Mr. Mallikarjuna',
     role: 'Depot 18 Manager',
-    photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face'
+    photo: 'https://lfuthmexacgvbyjufbih.supabase.co/storage/v1/object/public/vayuvajra/mallikarjunasir.png'
   },
   {
     name: 'Mr. Suresh Kumar',
@@ -21,12 +21,12 @@ const currentAuthorities = [
   {
     name: 'Ms.Vidya',
     role: 'Traffic Controller',
-    photo: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face'
+    photo: 'https://lfuthmexacgvbyjufbih.supabase.co/storage/v1/object/public/vayuvajra/vidya.png'
   },
   {
     name: 'Mr. Lokesh',
     role: 'Depot-18 Administrator',
-    photo: 'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=150&h=150&fit=crop&crop=face'
+    photo: 'https://lfuthmexacgvbyjufbih.supabase.co/storage/v1/object/public/vayuvajra/lokesh.png'
   },
   {
     name: 'Mr. Chalapathi',
@@ -39,7 +39,7 @@ const formerAuthorities = [
   {
     name: 'Mr. Satish',
     role: 'Former Depot Manager',
-    photo: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=face'
+    photo: 'https://lfuthmexacgvbyjufbih.supabase.co/storage/v1/object/public/vayuvajra/satishsir.png'
   },
   {
     name: 'Mr. Janimiya Bhagawan',
@@ -52,7 +52,7 @@ const vydehiAuthorities = [
   {
     name: 'Mr. Ramakrishnappa',
     role: 'Traffic Controller',
-    photo: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face'
+    photo: 'https://lfuthmexacgvbyjufbih.supabase.co/storage/v1/object/public/vayuvajra/Ramakrishnappasir.png'
   },
   {
     name: 'Mr. Narayanaswamy',
@@ -62,7 +62,7 @@ const vydehiAuthorities = [
   {
     name: 'Mr. Omkar Reddy',
     role: 'Traffic Controller',
-    photo: 'https://images.unsplash.com/photo-1543132220-3ec99c6094dc?w=150&h=150&fit=crop&crop=face'
+    photo: 'https://lfuthmexacgvbyjufbih.supabase.co/storage/v1/object/public/vayuvajra/Omakrreddysir.png'
   }
 ];
 
@@ -75,7 +75,7 @@ const kadugodiAuthorities = [
   {
     name: 'Mr. Patil',
     role: 'Traffic Controller',
-    photo: 'https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=150&h=150&fit=crop&crop=face'
+    photo: 'https://lfuthmexacgvbyjufbih.supabase.co/storage/v1/object/public/vayuvajra/Patil.png'
   },
   {
     name: 'Mr. Mohammed Anif',
