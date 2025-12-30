@@ -27,7 +27,7 @@ const currentAuthorities = [
 
 const formerAuthorities = [
   {
-    name: 'Mr. Satish S',
+    name: 'Mr. Satish',
     role: 'Former Depot Manager',
     photo: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=face'
   },
@@ -40,7 +40,7 @@ const formerAuthorities = [
 
 const vydehiAuthorities = [
   {
-    name: 'Mr. Raju',
+    name: 'Mr. Ramakrishnappa',
     role: 'Traffic Controller',
     photo: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face'
   },
@@ -68,7 +68,7 @@ const kadugodiAuthorities = [
     photo: 'https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=150&h=150&fit=crop&crop=face'
   },
   {
-    name: 'Mr. Aniff',
+    name: 'Mr. Mohammed Anif',
     role: 'Traffic Controller',
     photo: 'https://images.unsplash.com/photo-1557862921-37829c790f19?w=150&h=150&fit=crop&crop=face'
   },
