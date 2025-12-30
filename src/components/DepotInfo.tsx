@@ -27,6 +27,11 @@ const currentAuthorities = [
     name: 'Mr. Lokesh',
     role: 'Depot-18 Administrator',
     photo: 'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=150&h=150&fit=crop&crop=face'
+  },
+  {
+    name: 'Mr. Chalapathi',
+    role: 'Depot-18 Desiel Department Incharge',
+    photo: 'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=150&h=150&fit=crop&crop=face'
   }
 ];
 
