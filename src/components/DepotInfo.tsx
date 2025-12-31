@@ -42,8 +42,8 @@ const formerAuthorities = [
     photo: 'https://lfuthmexacgvbyjufbih.supabase.co/storage/v1/object/public/vayuvajra/satishsir.png'
   },
   {
-    name: 'Mr. Janimiya Bhagawan',
-    role: 'Former Asst. Traffic Sub Inspector',
+    name: 'Mr. Janimiya Bagawan',
+    role: 'Former Assistant Traffic Inspector',
     photo: 'https://lfuthmexacgvbyjufbih.supabase.co/storage/v1/object/public/vayuvajra/Janimiya.png'
   }
 ];
