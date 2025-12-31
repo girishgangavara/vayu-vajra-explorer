@@ -31,7 +31,7 @@ const currentAuthorities = [
   {
     name: 'Mr. Chalapathi',
     role: 'Depot-18 Desiel Department Incharge',
-    photo: ''
+    photo: 'https://lfuthmexacgvbyjufbih.supabase.co/storage/v1/object/public/vayuvajra/chalapathi.png'
   }
 ];
 
