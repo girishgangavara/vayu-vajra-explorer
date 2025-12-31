@@ -44,7 +44,7 @@ const formerAuthorities = [
   {
     name: 'Mr. Janimiya Bhagawan',
     role: 'Former Asst. Traffic Controller',
-    photo: ''
+    photo: 'https://lfuthmexacgvbyjufbih.supabase.co/storage/v1/object/public/vayuvajra/Janimiya.png'
   }
 ];
 
