@@ -12,7 +12,7 @@ const crewData = [
     busNumber: "KIA-15/2",
     crews: [
       { name: "(4817) Narayanaswamy", photo: "https://firebasestorage.googleapis.com/v0/b/kia-5d-crewlist.appspot.com/o/Narayanaswamy.jpg?alt=media&token=4b340f82-bd1d-4b4a-b75c-0dee8b40b0b4", days: ["Monday", "Thursday", "Saturday"] },
-      { name: "(11542) Sivappa", photo: "https://lfuthmexacgvbyjufbih.supabase.co/storage/v1/object/public/vayuvajra/sivappa.png", days: ["Tuesday", "Friday", "Sunday"] }
+      { name: "(11542) Sivappa", photo: "https://lfuthmexacgvbyjufbih.supabase.co/storage/v1/object/public/vayuvajra/Shiappa.png", days: ["Tuesday", "Friday", "Sunday"] }
     ]
   },
   {
