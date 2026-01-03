@@ -5,14 +5,14 @@ const crewData = [
     busNumber: "KIA-15/1",
     crews: [
       { name: "(1295) HariKrishna", photo: "https://firebasestorage.googleapis.com/v0/b/kia-5d-crewlist.appspot.com/o/harikrishna.png?alt=media&token=aecaaf5e-d8fa-45b8-854d-66b16f1b9ea5", days: ["Monday", "Thursday", "Saturday"] },
-      { name: "Ananda", photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face", days: ["Tuesday", "Friday", "Sunday"] }
+      { name: "(12040) Ananda", photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face", days: ["Tuesday", "Friday", "Sunday"] }
     ]
   },
   {
     busNumber: "KIA-15/2",
     crews: [
       { name: "(4817) Narayanaswamy", photo: "https://firebasestorage.googleapis.com/v0/b/kia-5d-crewlist.appspot.com/o/Narayanaswamy.jpg?alt=media&token=4b340f82-bd1d-4b4a-b75c-0dee8b40b0b4", days: ["Monday", "Thursday", "Saturday"] },
-      { name: "Sivappa", photo: "https://images.unsplash.com/photo-1599566150163-29194dcabd9c?w=150&h=150&fit=crop&crop=face", days: ["Tuesday", "Friday", "Sunday"] }
+      { name: "(11542) Sivappa", photo: "https://lfuthmexacgvbyjufbih.supabase.co/storage/v1/object/public/vayuvajra/sivappa.png", days: ["Tuesday", "Friday", "Sunday"] }
     ]
   },
   {
@@ -39,14 +39,14 @@ const crewData = [
   {
     busNumber: "KIA-15/7",
     crews: [
-      { name: "Basappa", photo: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face", days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"] }
+      { name: "(1782) Basappa", photo: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face", days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"] }
     ]
   }
 ];
 
 const reliefCrews = [
   { name: "(10095) Ravikumar", photo: "https://firebasestorage.googleapis.com/v0/b/kia-5d-crewlist.appspot.com/o/IMG_20240116_230603_135-removebg-preview.png?alt=media&token=53a4da18-5598-4ceb-9b24-c4c6fecc12cd", role: "Relief Driver" },
-  { name: "(5483) Keshava", photo: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&h=150&fit=crop&crop=face", role: "Relief Driver" },
+  { name: "(5483) Keshava", photo: "https://lfuthmexacgvbyjufbih.supabase.co/storage/v1/object/public/vayuvajra/Keshava.png", role: "Relief Driver" },
 ];
 
 const RotationCrews = () => {
