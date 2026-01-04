@@ -18,7 +18,7 @@ const crewData = [
   {
     busNumber: "KIA-15/3",
     crews: [
-      { name: "(451) Raghunathreddy", photo: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=face", days: ["Monday", "Thursday", "Saturday"] },
+      { name: "(451) Raghunathreddy", photo: "https://lfuthmexacgvbyjufbih.supabase.co/storage/v1/object/public/vayuvajra/Raghunathreddy.jpeg", days: ["Monday", "Wednesday", "Friday"] },
       { name: "(403) Chandrashekar", photo: "https://firebasestorage.googleapis.com/v0/b/kia-5d-crewlist.appspot.com/o/IMG_20240425_221946_907-removebg-preview.png?alt=media&token=c90da2ea-88f0-4da6-b906-151454d3617d", days: ["Tuesday", "Friday", "Sunday"] }
     ]
   },
