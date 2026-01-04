@@ -235,7 +235,7 @@ const DepotInfo = () => {
             <CardHeader className="pb-4">
               <CardTitle className="flex items-center gap-2 text-lg">
                 <Users className="w-5 h-5 text-muted-foreground" />
-                Former Authorities
+                Former authorities who took the initiative to introduce the KIA-15 Vayu Vajra service and played a key role in its successful implementation.
               </CardTitle>
             </CardHeader>
             <CardContent>
