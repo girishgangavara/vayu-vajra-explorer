@@ -57,7 +57,7 @@ const vydehiAuthorities = [
   {
     name: 'Mr. Narayanaswamy',
     role: 'Traffic Controller',
-    photo: ''
+    photo: 'https://lfuthmexacgvbyjufbih.supabase.co/storage/v1/object/public/vayuvajra/Narayanaswamy_sir_ttmc.jpeg'
   },
   {
     name: 'Mr. Omkar Reddy',
