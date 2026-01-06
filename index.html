@@ -19,8 +19,20 @@
     <meta name="twitter:image" content="https://play-lh.googleusercontent.com/b_Ifjxr923pQqicADg8g9j4wAXFOTXFCsSX1kf6ajp3J3TNQyBQifSakETdDrbTb4XU=w480-h960-rw" />
   </head>
 
-  <body>
+  <body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // Disable console
+      (function() {
+        try {
+          const noop = function() {};
+          const methods = ['log', 'debug', 'info', 'warn', 'error', 'table', 'trace', 'dir', 'dirxml', 'group', 'groupEnd', 'time', 'timeEnd', 'assert', 'count', 'profile', 'profileEnd'];
+          for (let i = 0; i < methods.length; i++) {
+            console[methods[i]] = noop;
+          }
+        } catch(e) {}
+      })();
+    </script>
   </body>
 </html>
