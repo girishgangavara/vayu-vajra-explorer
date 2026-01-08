@@ -1,5 +1,6 @@
 import { Building, Phone, MapPin, Bus, Users, Shield, UserCircle, Building2 } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import ProtectedImage from './ProtectedImage';
 import { Badge } from '@/components/ui/badge';
 
 const currentAuthorities = [
@@ -89,7 +90,7 @@ interface AuthorityCardProps {
 const AuthorityCard = ({ name, role, photo, isFormer = false }: AuthorityCardProps) => (
   <div className="flex flex-col items-center text-center p-4 bg-card/50 rounded-xl border border-border/30 hover:border-primary/40 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
     <div className="relative mb-3">
-      <img 
+      <ProtectedImage 
         src={photo} 
         alt={name}
         className="w-16 h-16 rounded-full object-cover border-2 border-primary/30"
