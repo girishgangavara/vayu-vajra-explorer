@@ -1,3 +1,4 @@
+// Language context for Kannada/English switching
 import { createContext, useContext, useState, ReactNode } from 'react';
 
 type Language = 'en' | 'kn';
