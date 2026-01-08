@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Plane } from 'lucide-react';
 import LanguageToggle from './LanguageToggle';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -25,12 +26,14 @@ const Navbar = () => {
     }
   }, [isMenuOpen]);
 
+  const { t } = useLanguage();
+
   const navLinks = [
-    { href: '#route', label: 'Route' },
-    { href: '#schedule', label: 'Schedule' },
-    { href: '#amenities', label: 'Amenities' },
-    { href: '#fare', label: 'Fare' },
-    { href: '#depot', label: 'Depot' },
+    { href: '#route', label: t('Route', 'ಮಾರ್ಗ') },
+    { href: '#schedule', label: t('Schedule', 'ವೇಳಾಪಟ್ಟಿ') },
+    { href: '#amenities', label: t('Amenities', 'ಸೌಲಭ್ಯಗಳು') },
+    { href: '#fare', label: t('Fare', 'ಭಾಡೆ') },
+    { href: '#depot', label: t('Depot', 'ಡಿಪೋ') },
   ];
 
   return (
