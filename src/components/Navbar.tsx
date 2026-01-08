@@ -32,7 +32,7 @@ const Navbar = () => {
     { href: '#route', label: t('Route', 'ಮಾರ್ಗ') },
     { href: '#schedule', label: t('Schedule', 'ವೇಳಾಪಟ್ಟಿ') },
     { href: '#amenities', label: t('Amenities', 'ಸೌಲಭ್ಯಗಳು') },
-    { href: '#fare', label: t('Fare', 'ಭಾಡೆ') },
+    { href: '#fare', label: t('Fare', 'ದರಗಳು') },
     { href: '#depot', label: t('Depot', 'ಡಿಪೋ') },
   ];
 
@@ -51,9 +51,9 @@ const Navbar = () => {
               <Plane className="w-5 h-5 text-white" />
             </div>
             <div>
-              <span className="font-bold text-lg text-foreground">KIA-15/15A</span>
+              <span className="font-bold text-lg text-foreground">{t('KIA-15/15A','ಕೆಐಎ-೧೫/೧೫ಎ')}</span>
               <span className="hidden sm:block text-xs text-muted-foreground">
-                Vayu Vajra
+                {t('Vayu Vajra','ವಾಯು ವಜ್ರ')}
               </span>
             </div>
           </a>
@@ -81,7 +81,7 @@ const Navbar = () => {
             >
               <div className="pb-4">
                 <button className="px-6 py-2.5 rounded-full bg-gradient-to-r from-primary to-primary/80 text-primary-foreground font-medium text-sm hover:shadow-glow transition-shadow">
-                  KIA-15 App
+                  {t('KIA-15 App','ಕೆಐಎ-೧೫ ಆಪ್')}
                 </button>
 
                 {isAppMenuOpen && (
@@ -92,7 +92,7 @@ const Navbar = () => {
                       rel="noopener noreferrer"
                       className="px-4 py-2 rounded-lg text-sm font-medium bg-secondary hover:bg-secondary/80 text-center"
                     >
-                      📱 Play Store
+                      📱 {t('Play Store','ಪ್ಲೇ ಸ್ಟೋರ್')}
                     </a>
                     <a
                       href="https://apps.apple.com/in/app/kia-15/id6751138454"
@@ -100,7 +100,7 @@ const Navbar = () => {
                       rel="noopener noreferrer"
                       className="px-4 py-2 rounded-lg text-sm font-medium bg-secondary hover:bg-secondary/80 text-center"
                     >
-                      🍎 App Store
+                      🍎 {t('App Store','ಆಪ್ ಸ್ಟೋರ್')}
                     </a>
                   </div>
                 )}
@@ -146,7 +146,7 @@ const Navbar = () => {
                   }
                   className="w-full px-6 py-2.5 rounded-full bg-gradient-to-r from-primary to-primary/80 text-primary-foreground font-medium text-sm flex items-center justify-center gap-2"
                 >
-                  KIA-15 App
+                  {t('KIA-15 App','ಕೆಐಎ-೧೫ ಆಪ್')}
                   <span
                     className={`transition-transform ${
                       isMobileAppMenuOpen ? 'rotate-180' : ''
@@ -164,7 +164,7 @@ const Navbar = () => {
                       rel="noopener noreferrer"
                       className="px-6 py-2.5 rounded-full bg-secondary text-sm font-medium text-center"
                     >
-                      📱 Play Store
+                      📱 {t('Play Store','ಪ್ಲೇ ಸ್ಟೋರ್')}
                     </a>
                     <a
                       href="https://apps.apple.com/in/app/kia-15/id6751138454"
@@ -172,7 +172,7 @@ const Navbar = () => {
                       rel="noopener noreferrer"
                       className="px-6 py-2.5 rounded-full bg-secondary text-sm font-medium text-center"
                     >
-                      🍎 App Store
+                      🍎 {t('App Store','ಆಪ್ ಸ್ಟೋರ್')}
                     </a>
                   </div>
                 )}
