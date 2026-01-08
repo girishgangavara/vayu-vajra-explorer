@@ -4,22 +4,22 @@ const crewData = [
   {
     busNumber: "KIA-15/1",
     crews: [
-      { name: "(1295) HariKrishna", photo: "https://firebasestorage.googleapis.com/v0/b/kia-5d-crewlist.appspot.com/o/harikrishna.png?alt=media&token=aecaaf5e-d8fa-45b8-854d-66b16f1b9ea5", days: ["Monday", "Thursday", "Saturday"] },
-      { name: "(12040) Ananda", photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face", days: ["Tuesday", "Friday", "Sunday"] }
+      { name: "(1295) HariKrishna", photo: "https://firebasestorage.googleapis.com/v0/b/kia-5d-crewlist.appspot.com/o/harikrishna.png?alt=media&token=aecaaf5e-d8fa-45b8-854d-66b16f1b9ea5", days: ["Tuesday", "Friday", "Sunday"] },
+      { name: "(12040) Ananda", photo: "https://lfuthmexacgvbyjufbih.supabase.co/storage/v1/object/public/vayuvajra/Ananda.png", days: ["Monday", "Wednesday", "Saturday"] }
     ]
   },
   {
     busNumber: "KIA-15/2",
     crews: [
       { name: "(4817) Narayanaswamy", photo: "https://firebasestorage.googleapis.com/v0/b/kia-5d-crewlist.appspot.com/o/Narayanaswamy.jpg?alt=media&token=4b340f82-bd1d-4b4a-b75c-0dee8b40b0b4", days: ["Monday", "Thursday", "Saturday"] },
-      { name: "(11542) Sivappa", photo: "https://lfuthmexacgvbyjufbih.supabase.co/storage/v1/object/public/vayuvajra/siavppa.png", days: ["Tuesday", "Friday", "Sunday"] }
+      { name: "(11542) Sivappa", photo: "https://lfuthmexacgvbyjufbih.supabase.co/storage/v1/object/public/vayuvajra/siavppa.png", days: ["Wednesday", "Friday", "Sunday"] }
     ]
   },
   {
     busNumber: "KIA-15/3",
     crews: [
       { name: "(451) Raghunathreddy", photo: "https://lfuthmexacgvbyjufbih.supabase.co/storage/v1/object/public/vayuvajra/Raghunathreddy.jpeg", days: ["Monday", "Wednesday", "Friday"] },
-      { name: "(403) Chandrashekar", photo: "https://firebasestorage.googleapis.com/v0/b/kia-5d-crewlist.appspot.com/o/IMG_20240425_221946_907-removebg-preview.png?alt=media&token=c90da2ea-88f0-4da6-b906-151454d3617d", days: ["Tuesday", "Friday", "Sunday"] }
+      { name: "(403) Chandrashekar", photo: "https://firebasestorage.googleapis.com/v0/b/kia-5d-crewlist.appspot.com/o/IMG_20240425_221946_907-removebg-preview.png?alt=media&token=c90da2ea-88f0-4da6-b906-151454d3617d", days: ["Tuesday", "Thursday", "Saturday"] }
     ]
   },
   {
@@ -32,8 +32,8 @@ const crewData = [
   {
     busNumber: "KIA-15/5",
     crews: [
-      { name: "(2959) Maruthi", photo: "https://firebasestorage.googleapis.com/v0/b/kia-5d-crewlist.appspot.com/o/IMG_20240425_223438-removebg-preview.png?alt=media&token=26071e20-4de4-479c-a8fa-8c18dafde5bc", days: ["Monday", "Thursday", "Saturday"] },
-      { name: "(2250) SivaRaman", photo: "https://firebasestorage.googleapis.com/v0/b/kia-5d-crewlist.appspot.com/o/IMG_20240425_222312_317-removebg-preview.png?alt=media&token=f6a58a69-6f17-4a10-9aca-651d99aea684", days: ["Tuesday", "Friday", "Sunday"] }
+      { name: "(2250) Siva Raman", photo: "https://lfuthmexacgvbyjufbih.supabase.co/storage/v1/object/public/vayuvajra/shivaraman.jpg", days: ["Monday", "Wednesday", "Friday"] },
+      { name: "(2959) Maruthi", photo: "https://firebasestorage.googleapis.com/v0/b/kia-5d-crewlist.appspot.com/o/IMG_20240425_223438-removebg-preview.png?alt=media&token=26071e20-4de4-479c-a8fa-8c18dafde5bc", days: ["Tuesday", "Thursday", "Saturday"] },
     ]
   },
   {
@@ -45,8 +45,8 @@ const crewData = [
 ];
 
 const reliefCrews = [
-  { name: "(10095) Ravikumar", photo: "https://firebasestorage.googleapis.com/v0/b/kia-5d-crewlist.appspot.com/o/IMG_20240116_230603_135-removebg-preview.png?alt=media&token=53a4da18-5598-4ceb-9b24-c4c6fecc12cd", role: "Relief Driver" },
-  { name: "(5483) Keshava", photo: "https://lfuthmexacgvbyjufbih.supabase.co/storage/v1/object/public/vayuvajra/Keshava.png", role: "Relief Driver" },
+  { name: "(10095) Ravikumar", photo: "https://firebasestorage.googleapis.com/v0/b/kia-5d-crewlist.appspot.com/o/IMG_20240116_230603_135-removebg-preview.png?alt=media&token=53a4da18-5598-4ceb-9b24-c4c6fecc12cd", role: "Relief Driver",days: [" Sunday (KIA-15/5), "," Tuesday (KIA-15/4)"] },
+  { name: "(5483) Keshava", photo: "https://lfuthmexacgvbyjufbih.supabase.co/storage/v1/object/public/vayuvajra/Keshava.png", role: "Relief Driver",days: [" Sunday (KIA-15/3), "," Tuesday (KIA-15/2), "," Thursday (KIA-15/1)"] },
 ];
 
 const RotationCrews = () => {
@@ -66,7 +66,7 @@ const RotationCrews = () => {
             <span className="text-sm font-medium text-primary">Our Team</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="text-gradient">Rotation Crews</span>
+            <span className="text-gradient">KIA-15 Rotation Crews</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Meet our dedicated crew members who ensure your safe and comfortable journey
@@ -119,17 +119,17 @@ const RotationCrews = () => {
         </div>
 
         {/* Relief/Backup Crews Section */}
-        <div className="mt-16">
-          <div className="text-center mb-10">
+        <div className="mt-5">
+          <div className="text-center mb-5">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 mb-4">
               <UserCheck className="w-4 h-4 text-accent" />
               <span className="text-sm font-medium text-accent">Backup Support</span>
             </div>
-            <h3 className="text-2xl md:text-3xl font-bold text-foreground">
-              Relief / Backup Crews
-            </h3>
+            <h2 className="text-4xl md:text-4xl font-bold mb-4">
+              <span className="text-gradient">KIA-15 Half Lever Crews</span>
+            </h2>
             <p className="text-muted-foreground mt-2">
-              Our relief team steps in when regular crews are off duty
+              Half Lever team steps in when regular crews are off duty
             </p>
           </div>
 
@@ -147,6 +147,7 @@ const RotationCrews = () => {
                 />
                 <h4 className="font-semibold text-foreground text-lg">{crew.name}</h4>
                 <p className="text-sm text-accent mt-1">{crew.role}</p>
+                <p className="text-sm text-accent mt-1">{crew.days}</p>
               </div>
             ))}
           </div>
@@ -161,7 +162,7 @@ const RotationCrews = () => {
             </div>
             <div className="flex items-center gap-2">
               <div className="w-3 h-3 rounded-full bg-accent"></div>
-              <span className="text-sm text-muted-foreground">Relief / Backup</span>
+              <span className="text-sm text-muted-foreground">Half Lever</span>
             </div>
           </div>
         </div>
