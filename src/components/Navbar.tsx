@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Plane } from 'lucide-react';
+import LanguageToggle from './LanguageToggle';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -67,37 +68,40 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Desktop App Dropdown */}
-          <div
-            className="relative hidden md:block"
-            onMouseEnter={() => setIsAppMenuOpen(true)}
-            onMouseLeave={() => setIsAppMenuOpen(false)}
-          >
-            <div className="pb-4">
-              <button className="px-6 py-2.5 rounded-full bg-gradient-to-r from-primary to-primary/80 text-primary-foreground font-medium text-sm hover:shadow-glow transition-shadow">
-                KIA-15 App
-              </button>
+          {/* Desktop Language Toggle & App Dropdown */}
+          <div className="hidden md:flex items-center gap-3">
+            <LanguageToggle />
+            <div
+              className="relative"
+              onMouseEnter={() => setIsAppMenuOpen(true)}
+              onMouseLeave={() => setIsAppMenuOpen(false)}
+            >
+              <div className="pb-4">
+                <button className="px-6 py-2.5 rounded-full bg-gradient-to-r from-primary to-primary/80 text-primary-foreground font-medium text-sm hover:shadow-glow transition-shadow">
+                  KIA-15 App
+                </button>
 
-              {isAppMenuOpen && (
-                <div className="absolute right-0 top-full w-48 glass-strong rounded-xl shadow-xl p-3 flex flex-col gap-2 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
-                  <a
-                    href="https://play.google.com/store/search?q=kia-15&c=apps"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-4 py-2 rounded-lg text-sm font-medium bg-secondary hover:bg-secondary/80 text-center"
-                  >
-                    📱 Play Store
-                  </a>
-                  <a
-                    href="https://apps.apple.com/in/app/kia-15/id6751138454"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-4 py-2 rounded-lg text-sm font-medium bg-secondary hover:bg-secondary/80 text-center"
-                  >
-                    🍎 App Store
-                  </a>
-                </div>
-              )}
+                {isAppMenuOpen && (
+                  <div className="absolute right-0 top-full w-48 glass-strong rounded-xl shadow-xl p-3 flex flex-col gap-2 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+                    <a
+                      href="https://play.google.com/store/search?q=kia-15&c=apps"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-2 rounded-lg text-sm font-medium bg-secondary hover:bg-secondary/80 text-center"
+                    >
+                      📱 Play Store
+                    </a>
+                    <a
+                      href="https://apps.apple.com/in/app/kia-15/id6751138454"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-2 rounded-lg text-sm font-medium bg-secondary hover:bg-secondary/80 text-center"
+                    >
+                      🍎 App Store
+                    </a>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
 
@@ -125,6 +129,11 @@ const Navbar = () => {
                   {link.label}
                 </a>
               ))}
+
+              {/* Mobile Language Toggle */}
+              <div className="mt-2">
+                <LanguageToggle />
+              </div>
 
               {/* Mobile App Dropdown */}
               <div className="mt-2">
