@@ -1,7 +1,6 @@
 import { Map } from 'lucide-react';
 import kia15RouteMap from '@/assets/kia-15-route-map.png';
 import kia15aRouteMap from '@/assets/kia-15a-route-map.png';
-import ProtectedImage from './ProtectedImage';
 
 const RouteMaps = () => {
   return (
@@ -28,11 +27,11 @@ const RouteMaps = () => {
                 <p className="text-sm text-muted-foreground">Vydehi TTMC → Airport (41.90 km)</p>
               </div>
             </div>
-            <div className="rounded-xl overflow-hidden border border-border/50 bg-white">
-              <ProtectedImage 
+            <div className="rounded-xl overflow-hidden border border-border/50">
+              <img 
                 src={kia15RouteMap} 
                 alt="KIA-15 Route Map from Vydehi Whitefield TTMC to Airport" 
-                className="w-full h-auto object-contain"
+                className="w-full h-auto object-contain bg-white"
               />
             </div>
           </div>
@@ -48,11 +47,11 @@ const RouteMaps = () => {
                 <p className="text-sm text-muted-foreground">Airport → Whitefield Area (48.76 km)</p>
               </div>
             </div>
-            <div className="rounded-xl overflow-hidden border border-border/50 bg-white">
-              <ProtectedImage 
+            <div className="rounded-xl overflow-hidden border border-border/50">
+              <img 
                 src={kia15aRouteMap} 
                 alt="KIA-15A Route Map from Airport to Whitefield covering entire Whitefield area" 
-                className="w-full h-auto object-contain"
+                className="w-full h-auto object-contain bg-white"
               />
             </div>
             <p className="text-xs text-muted-foreground mt-4 p-3 bg-red-500/10 rounded-lg border border-red-500/20">
