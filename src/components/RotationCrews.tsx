@@ -6,7 +6,7 @@ const crewData = [
     crews: [
       { name: "(1295) HariKrishna", photo: "https://firebasestorage.googleapis.com/v0/b/kia-5d-crewlist.appspot.com/o/harikrishna.png?alt=media&token=aecaaf5e-d8fa-45b8-854d-66b16f1b9ea5", days: ["Tuesday", "Friday", "Sunday"] },
       { name: "(12040) Ananda", photo: "https://lfuthmexacgvbyjufbih.supabase.co/storage/v1/object/public/vayuvajra/Ananda.png", days: ["Monday", "Wednesday", "Saturday"] },
-      { name: "(5483) Keshava", photo: "https://lfuthmexacgvbyjufbih.supabase.co/storage/v1/object/public/vayuvajra/Keshava.png", days: ["Thursday"] },
+      { name: "(5483) Keshava", photo: "https://lfuthmexacgvbyjufbih.supabase.co/storage/v1/object/public/vayuvajra/keshava.png", days: ["Thursday"] },
     ]
   },
   {
@@ -14,7 +14,7 @@ const crewData = [
     crews: [
       { name: "(4817) Narayanaswamy", photo: "https://firebasestorage.googleapis.com/v0/b/kia-5d-crewlist.appspot.com/o/Narayanaswamy.jpg?alt=media&token=4b340f82-bd1d-4b4a-b75c-0dee8b40b0b4", days: ["Monday", "Thursday", "Saturday"] },
       { name: "(11542) Sivappa", photo: "https://lfuthmexacgvbyjufbih.supabase.co/storage/v1/object/public/vayuvajra/siavppa.png", days: ["Wednesday", "Friday", "Sunday"] },
-      { name: "(5483) Keshava", photo: "https://lfuthmexacgvbyjufbih.supabase.co/storage/v1/object/public/vayuvajra/Keshava.png", days: ["Tuesday"] },
+      { name: "(5483) Keshava", photo: "https://lfuthmexacgvbyjufbih.supabase.co/storage/v1/object/public/vayuvajra/keshava.png", days: ["Tuesday"] },
     ]
   },
   {
@@ -22,7 +22,7 @@ const crewData = [
     crews: [
       { name: "(451) Raghunathreddy", photo: "https://lfuthmexacgvbyjufbih.supabase.co/storage/v1/object/public/vayuvajra/Raghunathreddy.jpeg", days: ["Monday", "Wednesday", "Friday"] },
       { name: "(403) Chandrashekar", photo: "https://firebasestorage.googleapis.com/v0/b/kia-5d-crewlist.appspot.com/o/IMG_20240425_221946_907-removebg-preview.png?alt=media&token=c90da2ea-88f0-4da6-b906-151454d3617d", days: ["Tuesday", "Thursday", "Saturday"] },
-      { name: "(5483) Keshava", photo: "https://lfuthmexacgvbyjufbih.supabase.co/storage/v1/object/public/vayuvajra/Keshava.png", days: ["Sunday"] },
+      { name: "(5483) Keshava", photo: "https://lfuthmexacgvbyjufbih.supabase.co/storage/v1/object/public/vayuvajra/keshava.png", days: ["Sunday"] },
     ]
   },
   {
@@ -30,7 +30,7 @@ const crewData = [
     crews: [
       { name: "(2197) Narayanaswamy", photo: "https://firebasestorage.googleapis.com/v0/b/kia-5d-crewlist.appspot.com/o/narayanaswamy-removebg-preview.png?alt=media&token=415360a3-c4c6-47d5-a87d-ba98b23667b8", days: ["Wednesday", "Friday", "Sunday"] },
       { name: "(1415) Babu", photo: "https://lfuthmexacgvbyjufbih.supabase.co/storage/v1/object/public/vayuvajra/BABU.jpeg", days: ["Monday", "Thursday", "Saturday"] },
-      { name: "(10095) Ravikumar", photo: "https://firebasestorage.googleapis.com/v0/b/kia-5d-crewlist.appspot.com/o/IMG_20240116_230603_135-removebg-preview.png?alt=media&token=53a4da18-5598-4ceb-9b24-c4c6fecc12cd", days: ["Tuesday"] },
+      { name: "(10095) Ravi Kumar N", photo: "https://firebasestorage.googleapis.com/v0/b/kia-5d-crewlist.appspot.com/o/IMG_20240116_230603_135-removebg-preview.png?alt=media&token=53a4da18-5598-4ceb-9b24-c4c6fecc12cd", days: ["Tuesday"] },
     ]
   },
   {
@@ -38,20 +38,20 @@ const crewData = [
     crews: [
       { name: "(2250) Siva Raman", photo: "https://lfuthmexacgvbyjufbih.supabase.co/storage/v1/object/public/vayuvajra/shivaraman.jpg", days: ["Monday", "Wednesday", "Friday"] },
       { name: "(2959) Maruthi", photo: "https://firebasestorage.googleapis.com/v0/b/kia-5d-crewlist.appspot.com/o/IMG_20240425_223438-removebg-preview.png?alt=media&token=26071e20-4de4-479c-a8fa-8c18dafde5bc", days: ["Tuesday", "Thursday", "Saturday"] },
-      { name: "(10095) Ravikumar", photo: "https://firebasestorage.googleapis.com/v0/b/kia-5d-crewlist.appspot.com/o/IMG_20240116_230603_135-removebg-preview.png?alt=media&token=53a4da18-5598-4ceb-9b24-c4c6fecc12cd", days: ["Sunday"] },
+      { name: "(10095) Ravi Kumar N", photo: "https://firebasestorage.googleapis.com/v0/b/kia-5d-crewlist.appspot.com/o/IMG_20240116_230603_135-removebg-preview.png?alt=media&token=53a4da18-5598-4ceb-9b24-c4c6fecc12cd", days: ["Sunday"] },
     ]
   },
   {
     busNumber: "KIA-15/7",
     crews: [
-      { name: "(1782) Basappa", photo: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face", days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"] }
+      { name: "(1782) Basappa", photo: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face", days: [ "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday","Sunday"] }
     ]
   }
 ];
 
 const reliefCrews = [
   { name: "(10095) Ravikumar", photo: "https://firebasestorage.googleapis.com/v0/b/kia-5d-crewlist.appspot.com/o/IMG_20240116_230603_135-removebg-preview.png?alt=media&token=53a4da18-5598-4ceb-9b24-c4c6fecc12cd", role: "Relief Driver",days: [" Sunday (KIA-15/5), "," Tuesday (KIA-15/4)"] },
-  { name: "(5483) Keshava", photo: "https://lfuthmexacgvbyjufbih.supabase.co/storage/v1/object/public/vayuvajra/Keshava.png", role: "Relief Driver",days: [" Sunday (KIA-15/3), "," Tuesday (KIA-15/2), "," Thursday (KIA-15/1)"] },
+  { name: "(5483) Keshava", photo: "https://lfuthmexacgvbyjufbih.supabase.co/storage/v1/object/public/vayuvajra/keshava.png", role: "Relief Driver",days: [" Sunday (KIA-15/3), "," Tuesday (KIA-15/2), "," Thursday (KIA-15/1)"] },
 ];
 
 const RotationCrews = () => {
