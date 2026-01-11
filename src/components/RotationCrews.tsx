@@ -42,7 +42,7 @@ const crewData = [
     ]
   },
   {
-    busNumber: "KIA-15/7",
+    busNumber: "KIA-15/7 (General Shift)",
     crews: [
       { name: "(1782) Basappa", photo: "https://lfuthmexacgvbyjufbih.supabase.co/storage/v1/object/public/vayuvajra/basappa.jpeg", days: [ "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday","Sunday"] }
     ]
