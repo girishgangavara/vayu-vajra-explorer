@@ -76,16 +76,9 @@ export const useProtection = () => {
       console.clear();
     }, 100);
 
-    // Detect DevTools
-    const detectDevTools = () => {
-      const threshold = 160;
-      const widthThreshold = window.outerWidth - window.innerWidth > threshold;
-      const heightThreshold = window.outerHeight - window.innerHeight > threshold;
-      
-      if (widthThreshold || heightThreshold) {
-        document.body.innerHTML = '<div style="display:flex;justify-content:center;align-items:center;height:100vh;background:#000;color:#fff;font-size:24px;">Access Denied</div>';
-      }
-    };
+    // DevTools detection removed - causes false positives on mobile
+    // when address bar hides/shows during scroll
+    const detectDevTools = () => {};
 
     // Add event listeners
     document.addEventListener('contextmenu', handleContextMenu);
