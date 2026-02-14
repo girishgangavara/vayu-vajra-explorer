@@ -70,7 +70,7 @@ const kadugodiAuthorities = [
   {
     name: 'Mr. Subramani',
     role: 'Assistant Traffic Inspector',
-    photo: 'https://firebasestorage.googleapis.com/v0/b/kia-5d-crewlist.appspot.com/o/Subramanisir.png?alt=media&token=45e124ca-98db-407a-8fc1-06f25665c316'
+    photo: 'https://lfuthmexacgvbyjufbih.supabase.co/storage/v1/object/public/vayuvajra/Subramanisir.png'
   },
   {
     name: 'Mr. Patil',
