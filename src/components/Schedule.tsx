@@ -3,13 +3,14 @@ import { Clock, Sun, Sunset, Moon } from 'lucide-react';
 const scheduleData = {
   fromWhitefield: {
     morning: ["04:15 AM", "05:15 AM", "06:15 AM", "07:15 AM", "07:40 AM", "08:20 AM", "09:20 AM", "10:20 AM", "10:45 AM", "11:15 AM", "11:45 AM"],
-    evening: ["02:40 PM", "03:10 PM", "03:30 PM", "04:30 PM", "05:25 PM", "06:15 PM", "06:40 PM", "07:55 PM", "08:50 PM", "09:50 PM", "10:40 PM"]
+    evening: ["01:25 PM","02:40 PM", "03:10 PM", "03:30 PM", "04:30 PM", "05:25 PM", "06:15 PM", "06:40 PM", "07:55 PM", "08:50 PM", "09:50 PM", "10:40 PM"]
   },
   fromAirport: {
     morning: ["06:15 AM", "07:10 AM", "08:15 AM", "09:15 AM", "09:40 AM", "10:15 AM", "11:15 AM"],
     afternoon: ["12:15 PM", "12:50 PM", "01:15 PM", "02:10 PM", "04:45 PM", "05:15 PM", "06:00 PM", "06:45 PM", "07:45 PM", "08:40 PM"],
     nightService: [
       { time: "12:40 AM", label: "15A" },
+      { time: "03:45 PM", label: "15A" },
       { time: "09:15 PM", label: "15A" },
       { time: "10:00 PM", label: "15A" },
       { time: "10:40 PM", label: "15A" },
